@@ -1,14 +1,10 @@
 #include <stdlib.h>                                                                                                                                                                                     
-#include <time.h>                                                                                                                                                                                       
-/* more headers goes there */                                                                                                                                                                           
+#include <time.h>                                                                                                                                                                                             
 #include <stdio.h>                                                                                                                                                                                      
-/* betty style doc for function main goes there */                                                                                                                                                      
-/**                                                                                                                                                                                                     
+/*                                                                                                                                                                                                 
  * main - used to check the condition                                                                                                                                                                   
- *                                                                                                                                                                                                      
- * Description: prints a random value                                                                                                                                                                   
- *                                                                                                                                                                                                      
- * Return: 0                                                                                                                                                                                            
+ *                                   
+ * Description: prints a random value                                                                                                                                                                                         * Return: 0                                                                                                     
  *                                                                                                                                                                                                      
  */                                                                                                                                                                                                     
 int main(void)                                                                                                                                                                                          
@@ -25,11 +21,8 @@ int main(void)
         {                                                                                                                                                                                               
                 printf("%d is zero\n", n);                                                                                                                                                              
         } else                                                                                                                                                                                          
-        {                                                                                                                                                                                               
+        {                                                                                                                                                                                          
                 printf("%d is negative\n", n);                                                                                                                                                          
-        }                                                                                                                                                                                               
-        return (0);                                                                                                                                                                                     
-                                                                                                                                                                                                        
-                                                                                                                                                                                                        
-                                                                                                                                                                                                        
-}                         
+        }
+	return (0);
+}	
