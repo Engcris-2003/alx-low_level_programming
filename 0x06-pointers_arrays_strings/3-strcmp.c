@@ -4,10 +4,12 @@
  * _strcmp - compares two strings
  * @s1: parameter
  * @s2: parameter
- * Return: s1
+ * Return: result
  */
 int _strcmp(char *s1, char *s2)
 {
-	strcmp(s1, s2);
-	return (s1);
+	int result;
+
+	result = strcmp(s1, s2);
+	return (result);
 }
