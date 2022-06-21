@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strchr - string character
+ * _strchr - find character in a string
  * @s: string
  * @c: character
  * Return: s or NULL
@@ -11,7 +11,7 @@ char *_strchr(char *s, char c)
 
 	while (s[a])
 		a++;
-	for (b = ; b < a; b++)
+	for (b = 0; b < a; b++)
 	{
 		if (c == s[b])
 			s += b;
