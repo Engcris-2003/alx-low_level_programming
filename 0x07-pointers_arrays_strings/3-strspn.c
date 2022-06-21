@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strspn - get length of prefix substring
+ * _strspn - search length of prefix substring
  * @s: source string
  * @accept: accept string
  * Return: a string
@@ -16,11 +16,11 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (accept[a] == s[b])
 			{
-				t++;
+				c++;
 			}
 			b++;
 		}
 		a++;
 	}
-	return (t);
+	return (c);
 }
