@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - main point
  * Description: adds positive numbers
@@ -14,7 +15,7 @@ int main(int argc, char *argv[])
 		printf("0\n");
 	for (i = 1; i < argc; i++)
 	{
-		for (j = 0; j < argv[i][j] != '\0'; j++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
@@ -25,7 +26,7 @@ int main(int argc, char *argv[])
 	}
 	for (k = 1; k < argc; k++)
 	{
-		num = atoi(argv[K]);
+		num = atoi(argv[k]);
 		result += num;
 	}
 	printf("%d\n", result);
