@@ -4,7 +4,6 @@
  * free_grid - frees a two dimensional grid
  * @grid: pointer
  * @height: integer
- * Return: free
  */
 void free_grid(int **grid, int height)
 {
@@ -14,5 +13,5 @@ void free_grid(int **grid, int height)
 	{
 		free(grid[i]);
 	}
-	return (free);
+	free(grid);
 }
