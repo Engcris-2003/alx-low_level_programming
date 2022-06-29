@@ -1,16 +1,16 @@
 #include "main.h"
 /**
- * _memset -  function that sets memory
- * @s: pointer to the block of memory
- * @b: value to be set
- * @n: number of bytes
- * Return: a string
+ * _memcpy - copies memory
+ * @dest: destination string
+ * @src: source string
+ * @n: string
+ * Return: dest
  */
-char *_memset(char *s, char b, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int a;
 
 	for (a = 0; a < n; a++)
-		s[a] = b;
-	return (s);
+		dest[a] = src[a];
+	return (dest);
 }

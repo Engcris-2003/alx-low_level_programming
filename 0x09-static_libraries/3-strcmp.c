@@ -1,21 +1,15 @@
 #include "main.h"
+#include <string.h>
 /**
- * char *_strcat - function that concatenates two strings
- * @dest: destination array
- * @src: string to be copied
- * Return: returns a pointer to the resulting string dest
+ * _strcmp - compares two strings
+ * @s1: parameter
+ * @s2: parameter
+ * Return: result
  */
-char *_strcat(char *dest, char *src)
+int _strcmp(char *s1, char *s2)
 {
-	int len = 0, i;
+	int result;
 
-	while (dest[len])
-		len++;
-	for (i = 0; src[i] != 0; i++)
-	{
-		dest[len] = src[i];
-		len += 1;
-	}
-	dest[len] = '\0';
-	return (dest);
+	result = strcmp(s1, s2);
+	return (result);
 }

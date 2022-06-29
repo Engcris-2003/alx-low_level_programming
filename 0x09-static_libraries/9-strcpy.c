@@ -1,11 +1,20 @@
 #include "main.h"
-#include <string.h>
 /**
- * _strlen - function that returns length of a string
- * @s: character
- * Return: returns the length of a string
+ * char *_strcpy - string pointed to by src
+ * @dest: parameter
+ * @src: parameter
+ * Return: Return value: the pointer to dest
  */
-int _strlen(char *s)
+char *_strcpy(char *dest, char *src)
 {
-	return (strlen(s));
+	int i;
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+
+	dest[i++] = '\0';
+
+	return (dest);
 }
