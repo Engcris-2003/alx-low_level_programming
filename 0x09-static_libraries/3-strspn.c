@@ -1,16 +1,26 @@
 #include "main.h"
 /**
- * _memset -  function that sets memory
- * @s: pointer to the block of memory
- * @b: value to be set
- * @n: number of bytes
+ * _strspn - search length of prefix substring
+ * @s: source string
+ * @accept: accept string
  * Return: a string
  */
-char *_memset(char *s, char b, unsigned int n)
+unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int a;
+	unsigned int a = 0, b, c = 0;
 
-	for (a = 0; a < n; a++)
-		s[a] = b;
-	return (s);
+	while (accept[a])
+	{
+		b = 0;
+		while (s[b] != 32)
+		{
+			if (accept[a] == s[b])
+			{
+				c++;
+			}
+			b++;
+		}
+		a++;
+	}
+	return (c);
 }

@@ -1,16 +1,29 @@
 #include "main.h"
 /**
- * _memset -  function that sets memory
- * @s: pointer to the block of memory
- * @b: value to be set
- * @n: number of bytes
+ * _strstr - locates a string
+ * @haystack: the string to search
+ * @needle: the string to find
  * Return: a string
  */
-char *_memset(char *s, char b, unsigned int n)
+char *_strstr(char *haystack, char *needle)
 {
-	unsigned int a;
+	int a = 0, b = 0;
 
-	for (a = 0; a < n; a++)
-		s[a] = b;
-	return (s);
+	while (haystack[a])
+	{
+		while (needle[b])
+		{
+			if (haystack[a + b] != needle[b])
+			{
+				break;
+			}
+			b++;
+		}
+		if (needle[b] == '\0')
+		{
+			return (haystack + a);
+		}
+		a++;
+	}
+	return ('\0');
 }

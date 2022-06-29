@@ -1,16 +1,29 @@
 #include "main.h"
 /**
- * _memset -  function that sets memory
- * @s: pointer to the block of memory
- * @b: value to be set
- * @n: number of bytes
+ * _strpbrk - searches a string
+ * @s: source string
+ * @accept: accepted character
  * Return: a string
  */
-char *_memset(char *s, char b, unsigned int n)
+char *_strpbrk(char *s, char *accept)
 {
-	unsigned int a;
+	int a = 0, b;
 
-	for (a = 0; a < n; a++)
-		s[a] = b;
-	return (s);
+	while (s[a])
+	{
+		b = 0;
+
+		while (accept[b])
+		{
+			if (s[a] == accept[b])
+			{
+				s += b;
+				return (s);
+			}
+			b++;
+		}
+		a++;
+	}
+	return ('\0');
+
 }
