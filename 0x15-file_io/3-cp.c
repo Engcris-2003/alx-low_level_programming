@@ -28,7 +28,7 @@ void error_file(int file_to, int file_from, char *argv[])
  */
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, err;
+	int file_from, file_to, err_close;
 	ssize_t i, j;
 	char buffer[1024];
 
@@ -39,26 +39,26 @@ int main(int argc, char *argv[])
 	}
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	err(file_from, file_to, argv);
+	error_file(file_from, file_to, argv);
 
 	i = 1024;
 	while (i == 1024)
 	{
 		i = read(file_from, buffer, 1024);
 		if (i == -1)
-			err(-1, 0, argv);
+			error_file(-1, 0, argv);
 		j = write(file_to, buffer, i);
 		if (j == -1)
-			err(0, -1, argv);
+			error_file(0, -1, argv);
 	}
-	err = close(file_from);
-	if (err == -1)
+	err_close = close(file_from);
+	if (err_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
-	err = close(file_to);
-	if (err == -1)
+	err_close = close(file_to);
+	if (err_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
